@@ -9,6 +9,8 @@ Dancer.prototype.step = function() {
 }
 
 Dancer.prototype.setPosition = function(top, left) {
+  var t = top ? top : 0;
+  var l = left ? left : 0;
   var styleSettings = {
     top: top,
     left: left
@@ -21,9 +23,5 @@ Dancer.prototype.setSpan = function() {
 };
 
 Dancer.prototype.lineup = function() {
-  var styleSettings = {
-    top: 0,
-    left: this.left
-  };
-  this.$node.css(styleSettings);
+  this.setPosition(0, null);
 };
