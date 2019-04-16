@@ -18,6 +18,12 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 }
 
+Dancer.prototype.getPosition = function() {
+  var top = this.$node.css("top");
+  var left = this.$node.css("left");
+  return [top, left];
+};
+
 Dancer.prototype.setSpan = function() {
   return $('<span class="dancer"></span>');
 };
