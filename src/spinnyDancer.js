@@ -7,7 +7,6 @@ SpinnyDancer.prototype.constructor = SpinnyDancer;
 
 SpinnyDancer.prototype.step = function() {
   Dancer.prototype.step.apply(this, this.timeBetweenSteps);
-  this.$node.toggle();
 };
 
 SpinnyDancer.prototype.setPosition = function(top, left){
@@ -15,5 +14,5 @@ SpinnyDancer.prototype.setPosition = function(top, left){
 };
 
 SpinnyDancer.prototype.setSpan = function(top, left){
-  return $('<span class="spin-dancer"></span>');
+  return $('<img class="sick" src="src/sick.png">');
 };

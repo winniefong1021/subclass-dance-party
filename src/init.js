@@ -23,11 +23,13 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      ($('#dance-floor').height() - 32) * Math.random(),
+      $('#dance-floor').height() * Math.random(),
       $('#dance-floor').width() * Math.random(),
       Math.random() * 1000
     );
     $('#dance-floor').append(dancer.$node);
   });
+
+  
 });
 
