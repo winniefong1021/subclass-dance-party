@@ -14,6 +14,7 @@ body, a:link, a:visited, a:active{
   float:right;
 }
 .topbar{
+  display: flex;
   height:32px;
   background-color: #555;
 }
@@ -21,7 +22,18 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid skyblue;
   border-radius:10px;
   position:absolute;
+}
+
+.spin-dancer{
+  border:10px solid orange;
+  border-radius:10px;
+  position:absolute;
+}
+
+#dance-floor {
+  height: 100%;
+  width: 100%;
 }
