@@ -28,8 +28,26 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('#dance-floor').append(dancer.$node);
+
+    var collidingDancers = window.dancers.forEach(function(compare){
+      return checkCollision(compare, dancer);
+    });
+
     window.dancers.push(dancer);
   });
+  
+  
+  var checkCollision = function(dancerA, dancerB) {
+    var aSquare = Math.pow((parseInt(dancerA.getPosition()[0]) - parseInt(dancerB.getPosition()[0])), 2);
+    var bSquare = Math.pow((parseInt(dancerA.getPosition()[1]) - parseInt(dancerB.getPosition()[1])), 2);
+    var difference = Math.sqrt(aSquare + bSquare);
+    if (difference < 50) {
+      var aSpan = dancerA.getSpan();
+      var bSpan = dancerB.getSpan();
+      aSpan.attr('src', 'src/blush.png');
+      bSpan.attr('src', 'src/blush.png');
+    }
+  }
 
   $('.lineUpButton').on('click', function(event){
     window.dancers.forEach(function(dancer){
@@ -37,9 +55,13 @@ $(document).ready(function() {
     });
   });
 
-  $('.sick').mouseover(function() {
+  $('.sick').hover(function() {
     console.log('spinnn!');
     $('.sick').addClass('sick-rotate');
+  });
+
+  $('img.sick').on('click', function(event){
+    console.log('clicked');
   });
 });
 

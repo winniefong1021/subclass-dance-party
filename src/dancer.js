@@ -28,6 +28,10 @@ Dancer.prototype.setSpan = function() {
   return $('<span class="dancer"></span>');
 };
 
+Dancer.prototype.getSpan = function() {
+  return this.$node;
+}
+
 Dancer.prototype.lineup = function() {
   this.setPosition(0, null);
 };
