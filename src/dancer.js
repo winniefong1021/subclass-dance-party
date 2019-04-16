@@ -33,5 +33,5 @@ Dancer.prototype.getSpan = function() {
 }
 
 Dancer.prototype.lineup = function() {
-  this.setPosition(0, null);
+  this.setPosition(32, null);
 };

@@ -23,7 +23,7 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $('#dance-floor').height() * Math.random(),
+      $('#dance-floor').height() * Math.random() + 32,
       $('#dance-floor').width() * Math.random(),
       Math.random() * 1000
     );
@@ -41,7 +41,7 @@ $(document).ready(function() {
     var aSquare = Math.pow((parseInt(dancerA.getPosition()[0]) - parseInt(dancerB.getPosition()[0])), 2);
     var bSquare = Math.pow((parseInt(dancerA.getPosition()[1]) - parseInt(dancerB.getPosition()[1])), 2);
     var difference = Math.sqrt(aSquare + bSquare);
-    if (difference < 50) {
+    if (difference < 100) {
       var aSpan = dancerA.getSpan();
       var bSpan = dancerB.getSpan();
       aSpan.attr('src', 'src/blush.png');
@@ -55,13 +55,13 @@ $(document).ready(function() {
     });
   });
 
-  $('.sick').hover(function() {
-    console.log('spinnn!');
-    $('.sick').addClass('sick-rotate');
-  });
+  // $('.sick').hover(function() {
+  //   console.log('spinnn!');
+  //   $('.sick').addClass('sick-rotate');
+  // });
 
-  $('img.sick').on('click', function(event){
-    console.log('clicked');
-  });
+  // $('img.sick').on('click', function(event){
+  //   console.log('clicked');
+  // });
 });
 
