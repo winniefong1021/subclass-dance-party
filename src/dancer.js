@@ -19,3 +19,11 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.setSpan = function() {
   return $('<span class="dancer"></span>');
 };
+
+Dancer.prototype.lineup = function() {
+  var styleSettings = {
+    top: 0,
+    left: this.left
+  };
+  this.$node.css(styleSettings);
+};

@@ -28,8 +28,18 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('#dance-floor').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
-  
+  $('.lineUpButton').on('click', function(event){
+    window.dancers.forEach(function(dancer){
+      dancer.lineup();
+    });
+  });
+
+  $('.sick').mouseover(function() {
+    console.log('spinnn!');
+    $('.sick').addClass('sick-rotate');
+  });
 });
 
