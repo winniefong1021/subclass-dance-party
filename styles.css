@@ -143,5 +143,7 @@ h1 {
 #dance-floor {
   height: 100%;
   width: auto;
-  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/JETFf6K/disco-dance-floor-wall-b02f-4k_v2uoablpe__F0000.png");
+  background-image: url("src/disco1.gif");
+  background-repeat:no-repeat;
+  background-size:cover;
 }
