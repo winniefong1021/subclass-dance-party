@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 body, html{
   height:100%;
 }
@@ -11,17 +59,35 @@ body, a:link, a:visited, a:active{
   color: lightblue;
 }
 .title, .addDancerButton, .lineUpButton {
+  font-family: 'Source Sans Pro', sans-serif;
   padding:5px 12px;
   float:right;
+  text-decoration: none
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 10px;
+  padding: 8px 20px 8px 20px;
+}
+
+.addDancerButton, .lineUpButton {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 8px 20px 8px 20px;
+}
+
+.addDancerButton:hover, .lineUpButton:hover, .title:hover {
+  background-color: #fc24fd
 }
 
 .topbar{
   display: flex;
-  height:32px;
-  background-color: #555;
+  height:40px;
+  background-color: #1d2556;
 }
 .title{
-  background-color: #777;
+  background-color: #1d2556;
 }
 .dancer{
   border:10px solid skyblue;
