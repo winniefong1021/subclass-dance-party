@@ -47,10 +47,12 @@ body, a:link, a:visited, a:active{
           transition: transform 0.8s ease-in-out;
 }
 
-/* .sick:hover {
+.sick-rotate {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-} */
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+          transition: transform 0.8s ease-in-out;
+}
 
 .blink {
   height: 100px;

@@ -34,8 +34,16 @@ $(document).ready(function() {
     });
 
     window.dancers.push(dancer);
+
+    dancer.getSpan().mouseenter(function(){
+      dancer.getSpan().addClass('sick-rotate');
+    });
+
+    dancer.getSpan().mouseleave(function(){
+      dancer.getSpan().removeClass('sick-rotate');
+    });
   });
-  
+
   
   var checkCollision = function(dancerA, dancerB) {
     var aSquare = Math.pow((parseInt(dancerA.getPosition()[0]) - parseInt(dancerB.getPosition()[0])), 2);
@@ -54,6 +62,9 @@ $(document).ready(function() {
       dancer.lineup();
     });
   });
+
+
+
 
   // $('.sick').hover(function() {
   //   console.log('spinnn!');
