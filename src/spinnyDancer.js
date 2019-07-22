@@ -7,7 +7,6 @@ SpinnyDancer.prototype.constructor = SpinnyDancer;
 
 SpinnyDancer.prototype.step = function() {
   Dancer.prototype.step.apply(this, this.timeBetweenSteps);
-  
 };
 
 SpinnyDancer.prototype.setPosition = function(top, left){

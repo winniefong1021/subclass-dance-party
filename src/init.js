@@ -21,7 +21,6 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(
       $('#dance-floor').height() * Math.random() + 32,
       $('#dance-floor').width() * Math.random(),
@@ -44,7 +43,6 @@ $(document).ready(function() {
     });
   });
 
-  
   var checkCollision = function(dancerA, dancerB) {
     var aSquare = Math.pow((parseInt(dancerA.getPosition()[0]) - parseInt(dancerB.getPosition()[0])), 2);
     var bSquare = Math.pow((parseInt(dancerA.getPosition()[1]) - parseInt(dancerB.getPosition()[1])), 2);
@@ -62,17 +60,5 @@ $(document).ready(function() {
       dancer.lineup();
     });
   });
-
-
-
-
-  // $('.sick').hover(function() {
-  //   console.log('spinnn!');
-  //   $('.sick').addClass('sick-rotate');
-  // });
-
-  // $('img.sick').on('click', function(event){
-  //   console.log('clicked');
-  // });
 });
 
